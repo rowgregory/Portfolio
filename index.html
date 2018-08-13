@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google Fonts-->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet"> -->
+    <!--CSS Reset-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!--Our CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Materialize CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"> -->
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Materialize.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+    <title>Portfolio2.0</title>
+
+</head>
+<body>
+
+    <button id="cta">Click me</button>
+
+    <svg viewBox="0 0 451 244">
+        <polygon class="polymorph" points="451,244 0,244 0,0 103,0 451,0 	"/>
+    </svg>
+
+    <div id="blip">
+        <h1>Hey! You've made it!</h1>
+        <p>You're almost there!</p>
+
+        <button id="cta2">Go Back!</button>
+    </div>
+
+
+       
+    
+
+
+<script src="assets/javascript/app.js"></script>
+<script src="assets/javascript/anime.min.js"></script>
+
+<script>
+
+    var btn = document.getElementById("cta");
+    var btn2 = document.getElementById("cta2");
+
+    btn.onclick = function() {
+
+        var morphing = anime({
+            targets: '.polymorph',
+            points: [
+                { value: '451,244 0,244 0,0 113,0 168,167'},
+                { value: '451,244 0,244 0,0 57,0 168,167'},
+                { value: '451,244 0,244 0,0 0,0 168,167'},
+                { value: '451,244 0,244 0,0 0,0 137,196 '}
+            ],
+            easing: 'easeOutQuad',
+            duration: 2000,
+            loop: false, 
+        });
+
+        anime({
+            targets:'#blip',
+            opacity:1,
+            delay:500,
+            duration:2200,
+            translateY:150
+        })
+
+        var promise = morphing.finished.then(() => {
+             btn2.onclick = function() {
+                var morphing = anime({
+                    targets: '.polymorph',
+                    points: [
+                        { value: '451,244 0,244 0,0 0,0 137,196'},
+                        { value: '451,244 0,244 0,0 0,0 168,167'},
+                        { value: '451,244 0,244 0,0 57,0 168,167'},
+                        { value: '451,244 0,244 0,0 103,0 451,0  '}
+                    ],
+                    easing: 'easeOutQuad',
+                    duration: 2000,
+                    loop: false, 
+                });
+                anime({
+                    targets:'#blip',
+                    opacity:0,
+                    delay:700,
+                    duration:1500,
+                    translateY:-800
+                })
+             }; 
+        })
+    }
+</script>
+</body>
+</html>

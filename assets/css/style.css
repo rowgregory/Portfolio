@@ -1,0 +1,51 @@
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.polymorph {
+    fill:#234;
+    
+}
+
+p {
+    font-size:1.2em;
+}
+
+#cta, #cta2 {
+    position: absolute;
+    margin:10em auto 0 auto;
+    left:0;
+    right:0;
+    width:30%;
+    background:none;
+    border:none;
+    border-radius:5px;
+    padding:15px;
+    font-size: 1.5em;
+    cursor:pointer;
+    outline:0;
+    color:#fff;
+    
+}
+
+#cta2{
+    width:auto;
+    margin:30px auto;
+    background:#80808080;
+}
+
+#blip {
+    position:absolute;
+    color: #80808080;
+    right:25%;
+    top:0;
+    opacity:0;
+    width:30%;
+    transform: translateY(-800px);
+}
+
+
+
+
+
+
