@@ -1,103 +1,580 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Google Fonts-->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet"> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet"> -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Overlock" rel="stylesheet">
     <!--CSS Reset-->
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <!--Our CSS-->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+    <!--Local CSS-->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
     <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Materialize CSS -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Materialize.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 
-    <title>Portfolio2.0</title>
+    <title>newest portfolio</title>
 
 </head>
+
+<style>
+    body {
+        background: black;
+        background-size: 60% auto;
+        font-family: sans-serif;
+        font-size: 1.1em;
+        line-height: 1em;
+    }
+
+    .star {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.0);
+        border-radius: 5px;
+    }
+
+    @keyframes twinkle {
+        0% {
+            transform: scale(1, 1);
+            background: rgba(255, 255, 255, 0.0);
+            animation-timing-function: ease-in;
+        }
+        60% {
+            transform: scale(0.8, 0.8);
+            background: rgba(255, 255, 255, 1);
+            animation-timing-function: ease-out;
+        }
+        80% {
+            background: rgba(255, 255, 255, 0.00);
+            transform: scale(1, 1);
+        }
+        100% {
+            background: rgba(255, 255, 255, 0.0);
+            transform: scale(1, 1);
+        }
+    }
+
+    h1 {
+        font-family: 'Overlock', cursive;
+        color: white;
+        text-align: center;
+        margin-top: 500px;
+
+    }
+
+    .button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+        border: solid 3px white;
+        width: 20vw;
+        text-align: center;
+        padding: 20px;
+        font-size: 1.2em;
+        cursor: pointer;
+        font-family: 'Overlock', cursive;
+
+    }
+
+    .button a {
+        color: white;
+
+    }
+
+    span {
+        color: blue;
+    }
+
+    .nav-wrapper {
+        margin: 0 auto;
+        color: black;
+        margin-top: 650px;
+        height: 300px;
+        background: #234;
+        position: relative;
+    }
+
+    .blueLine {
+        height: 4px;
+        background: rgb(48, 201, 221);
+        width: 100%;
+    }
+
+    #about {
+        margin-top: -49px;
+        background: white;
+        height: 1100px;
+        width: 100%;
+    }
+
+    h2 {
+        text-align: center;
+        padding: 50px 0 0 0;
+    }
+
+    h3 {
+        color: white;
+        text-align: center;
+        font-family: 'Overlock', cursive;
+    }
+
+    h4 {
+        margin-bottom: 5vw;
+    }
+
+    hr {
+        width: 7vw;
+        height: 3px;
+        background: #234;
+        margin-bottom: 100px;
+    }
+
+    .projects {
+        background: rgb(231, 221, 213);
+        height: 150%;
+        width: 100%;
+        color: black;
+        margin-top: -70px;
+    }
+
+    img {
+        width: 30vw
+    }
+
+    .contact {
+        color: white;
+    }
+
+    .contactContainer {
+        margin-top: -40px;
+        height: 600px;
+        background: rgba(60, 58, 61, 0.575);
+    }
+
+    footer {
+        height: 400px;
+
+    }
+
+    .page-footer {
+        background: rgba(53, 61, 71, 0.582);
+    }
+
+    .formContainer {
+
+        margin: 5px 30vw 0;
+
+    }
+
+    input {
+        color: orange;
+    }
+
+    ::-webkit-input-placeholder {
+        /* WebKit browsers */
+        color: grey;
+        opacity: 1 !important;
+        text-indent: 10px;
+    }
+
+    .headings {
+        width: 40vw;
+        margin-bottom: 5px;
+        border-bottom: none;
+        background: rgba(53, 61, 71, 0.582);
+    }
+
+    #submit {
+        height: 5em;
+        width: 5em;
+        background: none;
+        border: 2px solid white;
+        color: white;
+    }
+
+    textarea {
+        height: 16vw;
+    }
+
+    #name {
+        border-radius: 10px 10px 0 0;
+    }
+
+    input[type=text] {
+        color: orange;
+        line-height: 1.5;
+    }
+
+    p {
+        text-align: center;
+        line-height: 1.5em;
+    }
+
+    .image {
+        text-align: center;
+    }
+
+    ul {
+        position: relative;
+    }
+
+    .skillSet {
+        text-align: center;
+        font-size: 1.4em;
+        color: #234;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .skillImg {
+        width: 12vw;
+    }
+
+    .skillImg2 {
+        width: 9vw;
+    }
+
+    .skillImg3 {
+        width: 13.5vw;
+    }
+
+    .skillImg4 {
+        width: 11vw;
+
+    }
+
+    .skillImg5 {
+        width: 15vw;
+    }
+
+    .skillImg6 {
+        width: 8vw;
+    }
+
+    .skillImg7 {
+        width: 12vw;
+    }
+
+    .skillImg8 {
+        width: 12vw;
+    }
+
+    .nav {
+        margin-top: 500px;
+    }
+
+    .btn {
+        background: transparent;
+    }
+
+    .btn:hover {
+        background: transparent;
+    }
+
+    ul {
+        margin: 5px 0 0 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        ;
+        background-color: transparent;
+    }
+
+    ul .btn {
+        display: none;
+        cursor: pointer;
+    }
+
+    ul li {
+        float: left;
+        text-align: center;
+    }
+
+    ul li a {
+        display: block;
+        padding: 15px 0 15px 20px;
+        text-decoration: none;
+        color: #bbb;
+    }
+
+    ul li a:hover {
+        color: #fff;
+    }
+
+    @media (max-width: 30em) {
+        ul li {
+            float: none;
+        }
+        ul .btn {
+            display: block;
+        }
+        ul .menu li a {
+            padding: 0px 20px 10px 20px;
+        }
+        ul .menu {
+            display: none;
+        }
+        ul li:hover .menu {
+            display: block;
+        }
+    }
+
+    .st0 {
+        fill: #00202A;
+    }
+</style>
+
 <body>
+    <!-- <canvas id = "ltpcanvas" height="350" width="350"></canvas> -->
+    <div class="container space">
+        <div class="row">
+            <h1>Hello, I'm
+                <span>Gregory Row</span>
+            </h1>
+            <h3>I'm a web developer</h3>
+        </div>
+        <div class="row">
+            <div class="button">
+                <a href="#scrollHere">View my work</a>
+            </div>
+        </div>
+    </div>
+    <ul class="nav">
+        <li>
+            <a class="btn">&#9776;</a>
+            <ul class="menu">
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="#scrollHere">About</a>
+                </li>
+                <li>
+                    <a href="#_projects">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
 
-    <button id="cta">Click me</button>
 
-    <svg viewBox="0 0 451 244">
-        <polygon class="polymorph" points="451,244 0,244 0,0 103,0 451,0 	"/>
-    </svg>
 
-    <div id="blip">
-        <h1>Hey! You've made it!</h1>
-        <p>You're almost there!</p>
+    <div class="blueLine  "></div>
 
-        <button id="cta2">Go Back!</button>
+    <div class="row section scrollspy" id="scrollHere">
+        <div class="row " id="about">
+            <h2>About</h2>
+            <hr>
+            <br>
+
+
+
+            <div class="col s12 m6 image">
+                <img src="assets/images/hexagonMe.png">
+                <p class="flow-text">Passionate for Front-End animations and responsive UI effects. Currently on the quest to become a full-stack
+                    web-developer.</p>
+            </div>
+            <div class="col s12 m6 skillSet">
+                <h4>Skills</h4>
+                <ul>
+                    <li>
+                        <img class="skillImg" src="assets/images/html.png">
+                    </li>
+                    <li>
+                        <img class="skillImg2" src="assets/images/css.png">
+                    </li>
+                    <li>
+                        <img class="skillImg3" src="assets/images/javascript.jpg">
+                    </li>
+                    <li>
+                        <img class="skillImg4" src="assets/images/jQuery.png">
+                    </li>
+
+
+
+
+                    <li>
+                        <img class="skillImg5" src="assets/images/Git.png">
+                    </li>
+                    <li>
+                        <img class="skillImg6" src="assets/images/anime.png">
+                    </li>
+                    <li>
+                        <img class="skillImg7" src="assets/images/animate-css.jpg">
+                    </li>
+                    <li>
+                        <img class="skillImg8" src="assets/images/materialize.png">
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
 
-       
-    
+
+    </div>
+    <div class="container projects ">
+        <h2 class="prjt ">Projects</h2>
+        <hr>
+        <div class="row _row1 section scrollspy" id="_projects">
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="assets/images/sonic_wallpaper.jpg">
+                        <span class="card-title opacity" style="width:100%">
+                            <a href="https://rowgregory.github.io/Word-Guess-Game/">Word Guess Game</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="assets/images/dino3D2.jpg">
+                        <span class="card-title opacity" style="width:100%">
+                            <a href="https://rowgregory.github.io/unit-4-game/">Crystal Collector</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="assets/images/lost_wallpaper.jpg">
+                        <span class="card-title opacity" style="width:100%">
+                            <a href="https://rowgregory.github.io/Trivia-Game/">Trivia Game</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="assets/images/colorful_wallpaper.jpg">
+                        <span class="card-title opacity" style="width:100%">
+                            <a href="https://rowgregory.github.io/gifTastic/">gifTastic</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="assets/images/train_1.jpg">
+                        <span class="card-title opacity" style="width:100%">
+                            <a href="https://rowgregory.github.io/Train-Scheduler/">Train Scheduler</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="assets/images/galaxy1.jpg">
+                        <span class="card-title opacity" style="width:100%">
+                            <a href="https://scottasawyer.github.io/RockIT/">rock-IT</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-<script src="assets/javascript/app.js"></script>
-<script src="assets/javascript/anime.min.js"></script>
 
-<script>
 
-    var btn = document.getElementById("cta");
-    var btn2 = document.getElementById("cta2");
 
-    btn.onclick = function() {
+    <div class="container-fluid contactContainer">
 
-        var morphing = anime({
-            targets: '.polymorph',
-            points: [
-                { value: '451,244 0,244 0,0 113,0 168,167'},
-                { value: '451,244 0,244 0,0 57,0 168,167'},
-                { value: '451,244 0,244 0,0 0,0 168,167'},
-                { value: '451,244 0,244 0,0 0,0 137,196 '}
-            ],
-            easing: 'easeOutQuad',
-            duration: 2000,
-            loop: false, 
-        });
+        <h2 class="contact ">Contact</h2>
 
-        anime({
-            targets:'#blip',
-            opacity:1,
-            delay:500,
-            duration:2200,
-            translateY:150
-        })
+        <section class="main-section formContainer">
 
-        var promise = morphing.finished.then(() => {
-             btn2.onclick = function() {
-                var morphing = anime({
-                    targets: '.polymorph',
-                    points: [
-                        { value: '451,244 0,244 0,0 0,0 137,196'},
-                        { value: '451,244 0,244 0,0 0,0 168,167'},
-                        { value: '451,244 0,244 0,0 57,0 168,167'},
-                        { value: '451,244 0,244 0,0 103,0 451,0  '}
-                    ],
-                    easing: 'easeOutQuad',
-                    duration: 2000,
-                    loop: false, 
-                });
-                anime({
-                    targets:'#blip',
-                    opacity:0,
-                    delay:700,
-                    duration:1500,
-                    translateY:-800
-                })
-             }; 
-        })
-    }
-</script>
+            <div class="row section scrollspy" id="contact">
+
+                <div class="col l6 s12">
+
+
+                    <div class="formTxt">
+
+                        <form action="/action_page.php">
+
+                            <div id="name" class="headings">
+
+                                <br>
+                                <input type="text" placeholder="Name">
+                                <br>
+                            </div>
+
+
+                            <div id="email" class="headings">
+
+                                <br>
+                                <input type="text" placeholder="Email..">
+                                <br>
+                            </div>
+
+                            <div id="message" class="headings">
+
+                                <br>
+                                <textarea name="textarea" placeholder="your message"></textarea>
+                                <br>
+                            </div>
+
+                            <br>
+                            <button id="submit" class="headings" type="submit" value="Submit">SUBMIT</button>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="page-footer">
+
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class=" white-text">Made by Gregory Row</h5>
+                    <p class="grey-text text-lighten-4">Hope you're enjoing yourself!</p>
+                </div>
+                <div class="col 14 offset-12 s12">
+                    <h5 class=" white-text">My pages</h5>
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="https://github.com/rowgregory">GitHub</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/gregory-row-8853b2161/">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="https://rowgregory.github.io/">Portal</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <script src="assets/javascript/game.js"></script>
 </body>
+
 </html>
