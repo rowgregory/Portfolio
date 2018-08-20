@@ -14,6 +14,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <!--Materialize Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Materialize.js-->
@@ -25,12 +27,16 @@
 
 <style>
     body {
-        background: black;
-        background-size: 60% auto;
+        background: linear-gradient(to bottom, black 0%, black 33%, rgb(251, 243, 236) 33%, rgb(251, 243, 236) 80%,  #003150 100%);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        /* background: black; */
+        /* background-size: 60% auto; */
         font-family: sans-serif;
         font-size: 1.1em;
         line-height: 1em;
     }
+    
 
     .star {
         position: absolute;
@@ -65,19 +71,19 @@
         font-family: 'Overlock', cursive;
         color: white;
         text-align: center;
-        
+
 
     }
 
-    .space{
-        margin-top:30vw;
+    .space {
+        margin-top: 30vw;
     }
 
     .button {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom:60vw;
+        margin-bottom: 60vw;
         color: white;
         border: solid 3px white;
         width: 11em;
@@ -91,7 +97,7 @@
 
     .button a {
         color: whitesmoke;
-        display:flex;
+        display: flex;
 
     }
 
@@ -144,11 +150,18 @@
     }
 
     .projects {
-        background: rgb(251, 243, 236);
-        height: 150%;
+        /* background: rgb(251, 243, 236); */
+        /* height: 150%; */
         width: 100%;
         color: black;
         margin-top: -70px;
+        padding-bottom:300px;
+        width:100vw;
+    }
+    
+    svg{
+        margin-top: -160px;
+        z-index:-1;
     }
 
     img {
@@ -158,10 +171,11 @@
     .contact {
         color: white;
     }
-    #contact{
-        width:100%;
+
+    #contact {
+        width: 100%;
     }
-    
+
 
     .contactContainer {
         margin-top: -40px;
@@ -176,11 +190,15 @@
 
     .page-footer {
         background: rgba(53, 61, 71, 0.582);
-        margin-top:-20px;
+        margin-top: -20px;
+        
+        height:auto;
     }
 
     .formContainer {
-        margin: 5px 10vw 0;
+        /* z-index:20;
+        margin: 5px 10vw 0; */
+        
     }
 
     input {
@@ -207,8 +225,8 @@
         background: none;
         border: 2px solid white;
         color: white;
-        
-        font-size:0.8em;
+
+        font-size: 0.8em;
     }
 
     textarea {
@@ -217,9 +235,9 @@
 
     #name {
         border-radius: 10px 10px 0 0;
-        width:77vw;
+        width: 77vw;
     }
-    
+
 
     input[type=text] {
         color: orange;
@@ -248,45 +266,45 @@
 
     .skillImg {
         width: 12vw;
-        margin-bottom:2vw;
+        margin-bottom: 2vw;
     }
 
     .skillImg2 {
         width: 9vw;
-        margin-bottom:2vw;
+        margin-bottom: 2vw;
     }
 
     .skillImg3 {
         width: 13.5vw;
-        margin-bottom:2vw;
+        margin-bottom: 2vw;
     }
 
     .skillImg4 {
         width: 11vw;
-        margin-bottom:2vw;
+        margin-bottom: 2vw;
 
     }
 
     .skillImg5 {
         width: 15vw;
-        margin-bottom:2vw;
+        margin-bottom: 2vw;
     }
 
     .skillImg6 {
         width: 8vw;
-        margin-bottom:2vw;
+        margin-bottom: 2vw;
     }
 
     .skillImg7 {
         width: 12vw;
-        margin-bottom:2vw;
+        margin-bottom: 2vw;
     }
 
     .skillImg8 {
         width: 12vw;
-        margin-bottom:2vw;
+        margin-bottom: 2vw;
     }
-    
+
 
     /* .nav {
         margin-top: 70vw;
@@ -350,23 +368,52 @@
     .st0 {
         fill: #00202A;
     }
-    #name{
-        margin-left:-2vw;
+
+    #name {
+        margin-left: -2vw;
+        
     }
-    #email{
-        width:77vw;
-        margin-left:-2vw;
+
+    #email {
+        width: 77vw;
+        margin-left: -2vw;
     }
-    #message{
-        width:77vw;
-        margin-left:-2vw;
+
+    #message {
+        width: 77vw;
+        margin-left: -2vw;
     }
-    .fa{
-        margin-left:3vw;
+
+    .fa {
+        margin-left: 3vw;
     }
-    .myPages{
-        text-align:center;
+
+    .myPages {
+        text-align: center;
     }
+
+    .projectTitle {
+        display: inline-flex;
+        justify-content: center;
+        color: white;
+        /* padding:7px 100px; */
+        font-size: 0.7em;
+        background: rgba(0, 0, 0, 0.5);
+        height: auto;
+        width: 40vw;
+    }
+    .sonic{
+        font-size:20vw;
+    }
+    .contactRow{
+        margin-bottom:-30px;
+    }
+    .linkImages{
+        margin-bottom:50px;
+    }
+    .st0{
+        fill:#003150;
+        }
 </style>
 
 <body>
@@ -380,7 +427,9 @@
         </div>
         <div class="row">
             <div class="button">
-                <a href="#scrollHere">View my work<i class="fa fa-arrow-right"></i></a>
+                <a href="#scrollHere">View my work
+                    <i class="fa fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -419,7 +468,8 @@
             <div class="col s12 m6 image">
                 <img src="assets/images/hexagonMe.png">
                 <p class="flow-text">Passionate for Front-End animations and responsive UI effects. Currently on the quest to become a full-stack
-                    web-developer.</p>
+                    web-developer.
+                </p>
             </div>
             <div class="col s12 m6 skillSet">
                 <h4>Skills</h4>
@@ -436,10 +486,6 @@
                     <li>
                         <img class="skillImg4" src="assets/images/jQuery.png">
                     </li>
-
-
-
-
                     <li>
                         <img class="skillImg5" src="assets/images/Git.png">
                     </li>
@@ -464,67 +510,201 @@
         <h2 class="prjt ">Projects</h2>
         <hr>
         <div class="row _row1 section scrollspy" id="_projects">
-            <div class="col s12 m6">
+            <div class="col s12 m5 offset-m1 l6">
+
                 <div class="card">
-                    <div class="card-image">
-                        <img src="assets/images/sonic_wallpaper.jpg">
-                        <span class="card-title opacity" style="width:100%">
-                            <a href="https://rowgregory.github.io/Word-Guess-Game/">Word Guess Game</a>
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="assets/images/sonic_wallpaper.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4 sonic" style="font-size:1.3em">Word Guess Game
+                            <i class="material-icons right">more_vert</i>
                         </span>
+                        <p>
+                            <a href="http://rowgregory.github.io/Word-Guess-Game/">Play now!</a>
+                        </p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Word Guess Game
+                            <i class="material-icons right">close</i>
+                        </span>
+                        <p>Enjoy a Sonic the Hedgehog themed hangman-like game where you guess Sonic's favorite games and characters
+                            over the years!</p>
+                        <ul class="collection with-header center-align">
+                            <li class="collection-header">
+                                <h4>Tech Used</h4>
+                            </li>
+                            <li class="collection-item">HTML</li>
+                            <li class="collection-item">CSS</li>
+                            <li class="collection-item">Javascript</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="col s12 m6">
+            <div class="col s12 m5 l6">
                 <div class="card">
-                    <div class="card-image">
-                        <img src="assets/images/dino3D2.jpg">
-                        <span class="card-title opacity" style="width:100%">
-                            <a href="https://rowgregory.github.io/unit-4-game/">Crystal Collector</a>
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="assets/images/dino3D2.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Crystal Collector
+                            <i class="material-icons right">more_vert</i>
                         </span>
+                        <p>
+                            <a href="http://rowgregory.github.io/unit-4-game/">Play now!</a>
+                        </p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Bone Collector
+                            <i class="material-icons right">close</i>
+                        </span>
+                        <p>Click on the screen and try to match the number generated with your random clicking! Win by matching the generated number!</p>
+                        <ul class="collection with-header center-align">
+                            <li class="collection-header">
+                                <h4>Tech Used</h4>
+                            </li>
+                            <li class="collection-item">HTML</li>
+                            <li class="collection-item">CSS</li>
+                            <li class="collection-item">Javascript</li>
+                            <li class="collection-item">jQuery</li>
+                            <li class="collection-item">Animate.css</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col s12 m6">
+            <div class="col s12 m5 offset-m1 l6">
                 <div class="card">
-                    <div class="card-image">
-                        <img src="assets/images/lost_wallpaper.jpg">
-                        <span class="card-title opacity" style="width:100%">
-                            <a href="https://rowgregory.github.io/Trivia-Game/">Trivia Game</a>
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="assets/images/lost_wallpaper.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4 sonic" style="font-size:1.3em">Trivia Game
+                            <i class="material-icons right">more_vert</i>
                         </span>
+                        <p>
+                            <a href="http://rowgregory.github.io/Trivia-Game/">Play now!</a>
+                        </p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">LOST series trivia game
+                            <i class="material-icons right">close</i>
+                        </span>
+                        <p>If you've enjoyed the LOST series than this is the trivia game for you. Race the clock as you try and answer ten questions correctly!</p>
+                        <ul class="collection with-header center-align">
+                            <li class="collection-header">
+                                <h4>Tech Used</h4>
+                            </li>
+                            <li class="collection-item">HTML</li>
+                            <li class="collection-item">CSS</li>
+                            <li class="collection-item">Javascript</li>
+                            <li class="collection-item">jQuery</li>
+                            <li class="collection-item">Animate.css</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="col s12 m6">
+            <div class="col s12 m5 l6">
                 <div class="card">
-                    <div class="card-image">
-                        <img src="assets/images/colorful_wallpaper.jpg">
-                        <span class="card-title opacity" style="width:100%">
-                            <a href="https://rowgregory.github.io/gifTastic/">gifTastic</a>
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="assets/images/colorful_wallpaper.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">gifTastic
+                            <i class="material-icons right">more_vert</i>
                         </span>
+                        <p>
+                            <a href="http://rowgregory.github.io/gifTastic/">Play now!</a>
+                        </p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">get Giphy!
+                            <i class="material-icons right">close</i>
+                        </span>
+                        <p>Enjoy exploring your favorite giphs. Then come back later to see your favorites!</p>
+                        <ul class="collection with-header center-align">
+                            <li class="collection-header">
+                                <h4>Tech Used</h4>
+                            </li>
+                            <li class="collection-item">HTML</li>
+                            <li class="collection-item">CSS</li>
+                            <li class="collection-item">Javascript</li>
+                            <li class="collection-item">jQuery</li>
+                            <li class="collection-item">Animate.css</li>
+                            <li class="collection-item">AJAX</li>
+                            <li class="collection-item">Giphy API</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col s12 m6">
+            <div class="col s12 m5 offset-m1 l6">
                 <div class="card">
-                    <div class="card-image">
-                        <img src="assets/images/train_1.jpg">
-                        <span class="card-title opacity" style="width:100%">
-                            <a href="https://rowgregory.github.io/Train-Scheduler/">Train Scheduler</a>
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="assets/images/train_1.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4 sonic" style="font-size:1.3em">Train Scheduler
+                            <i class="material-icons right">more_vert</i>
                         </span>
+                        <p>
+                            <a href="http://rowgregory.github.io/Train-Scheduler/">Play now!</a>
+                        </p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Train Scheduler
+                            <i class="material-icons right">close</i>
+                        </span>
+                        <p>This app calculates your train's next arrival time!</p>
+                        <ul class="collection with-header center-align">
+                            <li class="collection-header">
+                                <h4>Tech Used</h4>
+                            </li>
+                            <li class="collection-item">HTML</li>
+                            <li class="collection-item">CSS</li>
+                            <li class="collection-item">Javascript</li>
+                            <li class="collection-item">jQuery</li>                  
+                            <li class="collection-item">Moment.js</li>
+                            <li class="collection-item">Firebase</li>
+                            <li class="collection-item">Animate.css</li>
+                            <li class="collection-item">Materialize.css</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="col s12 m6">
+            <div class="col s12 m5 l6">
                 <div class="card">
-                    <div class="card-image">
-                        <img src="assets/images/galaxy1.jpg">
-                        <span class="card-title opacity" style="width:100%">
-                            <a href="https://scottasawyer.github.io/RockIT/">rock-IT</a>
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="assets/images/galaxy1.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">RockIT
+                            <i class="material-icons right">more_vert</i>
                         </span>
+                        <p>
+                            <a href="http://rowgregory.github.io/gifTastic/">Play now!</a>
+                        </p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">RockIt
+                            <i class="material-icons right">close</i>
+                        </span>
+                        <p>Search all over the world with this unique app!</p>
+                        <ul class="collection with-header center-align">
+                            <li class="collection-header">
+                                <h4>Tech Used</h4>
+                            </li>
+                            <li class="collection-item">HTML</li>
+                            <li class="collection-item">CSS</li>
+                            <li class="collection-item">Javascript</li>
+                            <li class="collection-item">jQuery</li>
+                            <li class="collection-item">Animate.css</li>
+                            <li class="collection-item">AJAX</li>
+                            <li class="collection-item">Bands In Town API</li>
+                            <li class="collection-item">Open Weather Map API</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -533,13 +713,21 @@
 
 
 
+    <svg viewBox="0 0 268 141">
+            <!-- <polygon class="st0" points="0,0.7 134,39 268,0.7 267.5,69.5 0,70.5 	"/> -->   
+            <!-- <polygon class="st0" points="0,140.5 0,0.7 134,38.5 268,0.7 267.5,140.5 	"/> -->
+            
+                    <polygon class="st0" points="0,18.6 0,0.7 134,37.4 267.5,0.7 267.5,17.6 134,55.5 	"/>
+                    
+                    <polygon class="st0" points="0,44.6 0,26.7 134,63.4 267.5,26.7 267.5,43.6 134,81.5 	"/>
+                    
+        </svg>
 
+    <!-- <div class="container-fluid contactContainer"> -->
+            
+        <!-- <h2 class="contact ">Contact</h2> -->
 
-    <div class="container-fluid contactContainer">
-
-        <h2 class="contact ">Contact</h2>
-
-        <section class="main-section formContainer">
+        <!-- <section class="main-section formContainer">
 
             <div class="row section scrollspy" id="contact">
 
@@ -580,25 +768,36 @@
 
                 </div>
             </div>
-        </section>
-    </div>
+        </section> -->
+    <!-- </div> -->
 
     <footer class="page-footer">
 
         <div class="container">
-            <div class="row">
-                
+            <div class="row contactRow">
+
                 <div class="col 14 offset-12 s12">
-                    <h5 class=" white-text myPages">My pages</h5>
-                    <ul>
+                    <h4 class=" white-text myPages">Contact</h4>
+                    <ul class="col s9 offset-s1 m8 offset-m2 linkImages">
                         <li>
-                            <a class="grey-text text-lighten-3" href="https://github.com/rowgregory"><i class="fa fa-github fa-3x"></i></a>
+                            <a class="grey-text text-lighten-3" href="https://github.com/rowgregory">
+                                <i class="fa fa-github fa-4x"></i>
+                            </a>
                         </li>
                         <li>
-                            <a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/gregory-row-8853b2161/"><i class="fa fa-linkedin-square  fa-3x"></i></a>
+                            <a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/gregory-row-8853b2161/">
+                                <i class="fa fa-linkedin-square  fa-4x"></i>
+                            </a>
                         </li>
                         <li>
-                            <a class="grey-text text-lighten-3" href="https://rowgregory.github.io/"><i class="fa fa-sun-o  fa-3x"></i></a>
+                            <a class="grey-text text-lighten-3" href="https://rowgregory.github.io/">
+                                <i class="fa fa-sun-o  fa-4x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:rowgregory@gmail.com">
+                                <i class="fa fa-envelope fa-4x"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -608,7 +807,7 @@
 
 
 
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
         <script src="assets/javascript/game.js"></script>
 </body>
 
