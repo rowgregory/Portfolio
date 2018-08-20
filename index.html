@@ -27,7 +27,7 @@
 
 <style>
     body {
-        background: linear-gradient(to bottom, black 0%, black 33%, rgb(251, 243, 236) 33%, rgb(251, 243, 236) 80%,  #003150 100%);
+        background: linear-gradient(to bottom, black 0%, black 33%, rgb(236, 237, 251) 33%, rgb(251, 243, 236) 80%,  #003150 100%);
         background-size: 100%;
         background-repeat: no-repeat;
         /* background: black; */
@@ -258,57 +258,21 @@
     }
 
     .skillSet {
+        display: flex;
+        flex-flow: column;
+        white-space: pre-line;
+        position: relative;
+
+        white-space: nowrap;
+        
         text-align: center;
         font-size: 1.4em;
         color: #234;
         font-family: Arial, Helvetica, sans-serif;
     }
-
-    .skillImg {
-        width: 12vw;
-        margin-bottom: 2vw;
+    .skillList{
+        
     }
-
-    .skillImg2 {
-        width: 9vw;
-        margin-bottom: 2vw;
-    }
-
-    .skillImg3 {
-        width: 13.5vw;
-        margin-bottom: 2vw;
-    }
-
-    .skillImg4 {
-        width: 11vw;
-        margin-bottom: 2vw;
-
-    }
-
-    .skillImg5 {
-        width: 15vw;
-        margin-bottom: 2vw;
-    }
-
-    .skillImg6 {
-        width: 8vw;
-        margin-bottom: 2vw;
-    }
-
-    .skillImg7 {
-        width: 12vw;
-        margin-bottom: 2vw;
-    }
-
-    .skillImg8 {
-        width: 12vw;
-        margin-bottom: 2vw;
-    }
-
-
-    /* .nav {
-        margin-top: 70vw;
-    } */
 
     .btn {
         background: transparent;
@@ -385,7 +349,8 @@
     }
 
     .fa {
-        margin-left: 3vw;
+        
+        margin-left: 15px;
     }
 
     .myPages {
@@ -473,31 +438,16 @@
             </div>
             <div class="col s12 m6 skillSet">
                 <h4>Skills</h4>
-                <ul>
-                    <li>
-                        <img class="skillImg" src="assets/images/html.png">
-                    </li>
-                    <li>
-                        <img class="skillImg2" src="assets/images/css.png">
-                    </li>
-                    <li>
-                        <img class="skillImg3" src="assets/images/javascript.jpg">
-                    </li>
-                    <li>
-                        <img class="skillImg4" src="assets/images/jQuery.png">
-                    </li>
-                    <li>
-                        <img class="skillImg5" src="assets/images/Git.png">
-                    </li>
-                    <li>
-                        <img class="skillImg6" src="assets/images/anime.png">
-                    </li>
-                    <li>
-                        <img class="skillImg7" src="assets/images/animate-css.jpg">
-                    </li>
-                    <li>
-                        <img class="skillImg8" src="assets/images/materialize.png">
-                    </li>
+                <ul class="col m6 offset-m3 l4 offset-l4 xl4 offset-xl4 text" id="skillList">
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>Javascript</p>                   
+                    <p>jQuery</p>                    
+                    <p>Git</p>                   
+                    <p>Anime.js</p>                   
+                    <p>Animate.css</p>                   
+                    <p>Materialize.css</p>                    
+                    <p>Bootstrap</p>
                 </ul>
             </div>
         </div>
@@ -723,54 +673,6 @@
                     
         </svg>
 
-    <!-- <div class="container-fluid contactContainer"> -->
-            
-        <!-- <h2 class="contact ">Contact</h2> -->
-
-        <!-- <section class="main-section formContainer">
-
-            <div class="row section scrollspy" id="contact">
-
-                <div class="col l6 s12">
-
-
-                    <div class="formTxt">
-
-                        <form action="/action_page.php">
-
-                            <div id="name" class="headings">
-
-                                <br>
-                                <input type="text" placeholder="Name">
-                                <br>
-                            </div>
-
-
-                            <div id="email" class="headings">
-
-                                <br>
-                                <input type="text" placeholder="Email..">
-                                <br>
-                            </div>
-
-                            <div id="message" class="headings">
-
-                                <br>
-                                <textarea name="textarea" placeholder="your message"></textarea>
-                                <br>
-                            </div>
-
-                            <br>
-                            <button id="submit" class="headings" type="submit" value="Submit">SUBMIT</button>
-
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </section> -->
-    <!-- </div> -->
-
     <footer class="page-footer">
 
         <div class="container section scrollspy" id="contact">
@@ -778,7 +680,7 @@
 
                 <div class="col 14 offset-12 s12">
                     <h4 class=" white-text myPages">Contact</h4>
-                    <ul class="col s9 offset-s1 m8 offset-m2 linkImages">
+                    <ul class="col s9 offset-s1 m8 offset-m2 l6 offset-l3 linkImages">
                         <li>
                             <a class="grey-text text-lighten-3" href="https://github.com/rowgregory">
                                 <i class="fa fa-github fa-4x"></i>
