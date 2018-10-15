@@ -117,6 +117,9 @@ body {
   .contact{
       color:white;
   }
+  #contact{
+      background:none;
+  }
   
   .contactContainer{
       margin-top:-40px;
