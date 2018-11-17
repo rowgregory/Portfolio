@@ -1,17 +1,40 @@
-# Updated portfolio
+# Portfolio
+
+ * Click the link to view all my work!
+
+## Getting Started
+
+ * Clone repo
+ * Open index.html in your browser
+
+## Visit live
+
+ * [Portfolio](https://rowgregory.github.io/Portfolio/)
+     
+## Demo Videos
+
+ * ![](assets/images/Sonic-Word-Guess.gif?raw=true)
+ 
+## Technologies Used
+
+ * HTML
+ * CSS
+ * JavaScript
+ * jQuery
+ * Materialize
+ 
+
+## Prerequisites
+
+ - Visual Studio Code
+
+## Authors
+
+ * **Gregory Row** - *Initial work* - [rowgregory](https://github.com/rowgregory)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 
 
-Updated portfolio. Built with HTML, CSS, Javasctipt, jQuery, and Materialize. 
-
-## Instructions
-* Click on the link and enjoy!
-
-
-## Deployment
-
-You can see this applition live at : https://rowgregory.github.io/portfolio2.0/
-
-## Installation
-1. `git clone` the repo.
-2. Open `index.html` in your favorite browser.
