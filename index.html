@@ -9,7 +9,7 @@
     <!--CSS Reset-->
     <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
     <!--Local CSS-->
-    <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Materialize CSS -->
@@ -26,379 +26,20 @@
 
 </head>
 
-<style>
-    body {
-        background: linear-gradient(to bottom, black 0%, black 3%, rgb(236, 237, 251) 33%, rgb(251, 243, 236) 80%, #003150 100%);
-        background-size: 100%;
-        font-family: sans-serif;
-        font-size: 1.1em;
-        line-height: 1em;
-    }
 
-    .star {
-        position: absolute;
-        width: 2px;
-        height: 2px;
-        background: rgba(255, 255, 255, 0.0);
-        border-radius: 5px;
-    }
-
-    @keyframes twinkle {
-        0% {
-            transform: scale(1, 1);
-            background: rgba(255, 255, 255, 0.0);
-            animation-timing-function: ease-in;
-        }
-
-        60% {
-            transform: scale(0.8, 0.8);
-            background: rgba(255, 255, 255, 1);
-            animation-timing-function: ease-out;
-        }
-
-        80% {
-            background: rgba(255, 255, 255, 0.00);
-            transform: scale(1, 1);
-        }
-
-        100% {
-            background: rgba(255, 255, 255, 0.0);
-            transform: scale(1, 1);
-        }
-    }
-
-    h1 {
-        font-family: 'Overlock', cursive;
-        color: white;
-        text-align: center;
-    }
-
-    .space {
-        margin-top: 30vw;
-    }
-
-    .button {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 15vw;
-        color: white;
-        border: solid 3px white;
-        width: 11em;
-        text-align: center;
-        padding: 20px;
-        font-size: 1.2em;
-        cursor: pointer;
-        font-family: 'Overlock', cursive;
-    }
-
-    .button a {
-        color: whitesmoke;
-        display: flex;
-    }
-
-    span {
-        color: blue;
-    }
-
-    .nav-wrapper {
-        margin: 0 auto;
-        color: black;
-        margin-top: 650px;
-        height: 300px;
-        background: #234;
-        position: relative;
-    }
-
-    .blueLine {
-        height: 4px;
-        background: rgb(48, 201, 221);
-        width: 100%;
-    }
-
-    #about {
-        margin-top: -49px;
-        background: white;
-        height: auto;
-        width: 100%;
-    }
-
-    h2 {
-        text-align: center;
-        padding: 50px 0 0 0;
-    }
-
-    h3 {
-        color: white;
-        text-align: center;
-        font-family: 'Overlock', cursive;
-    }
-
-    h4 {
-        margin-bottom: 5vw;
-    }
-
-    hr {
-        width: 7vw;
-        height: 3px;
-        background: #234;
-        margin-bottom: 100px;
-    }
-
-    .projects {
-        width: 100%;
-        color: black;
-        margin-top: -90px;
-        padding-bottom: 300px;
-        width: 100vw;
-    }
-
-    svg {
-        margin-top: -160px;
-        z-index: -1;
-    }
-
-    img {
-        width: 30vw
-    }
-
-    .contact {
-        color: white;
-    }
-
-    #contact {
-        width: 100%;
-    }
-
-
-    .contactContainer {
-        margin-top: -40px;
-        height: auto;
-        background: rgba(60, 58, 61, 0.575);
-    }
-
-    footer {
-        height: 400px;
-
-    }
-
-    .page-footer {
-        background: rgba(53, 61, 71, 0.582);
-        margin-top: -20px;
-
-        height: auto;
-    }
-
-    input {
-        color: orange;
-    }
-
-    ::-webkit-input-placeholder {
-        /* WebKit browsers */
-        color: grey;
-        opacity: 1 !important;
-        text-indent: 10px;
-    }
-
-    .headings {
-        width: 40vw;
-        margin-bottom: 5px;
-        border-bottom: none;
-        background: rgba(53, 61, 71, 0.582);
-    }
-
-    #submit {
-        height: 5em;
-        width: 7em;
-        background: none;
-        border: 2px solid white;
-        color: white;
-
-        font-size: 0.8em;
-    }
-
-    textarea {
-        height: 16vw;
-    }
-
-    #name {
-        border-radius: 10px 10px 0 0;
-        width: 77vw;
-    }
-
-    input[type=text] {
-        color: orange;
-        line-height: 1.5;
-    }
-
-    p {
-        text-align: center;
-        line-height: 1.5em;
-    }
-
-    .image {
-        text-align: center;
-    }
-
-    ul {
-        position: relative;
-    }
-
-    .skillSet {
-        display: flex;
-        flex-flow: column;
-        white-space: pre-line;
-        position: relative;
-        white-space: nowrap;
-        text-align: center;
-        font-size: 1.4em;
-        color: #234;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .btn {
-        background: transparent;
-    }
-
-    .btn:hover {
-        background: transparent;
-    }
-
-    ul {
-        margin: 5px 0 0 0;
-        padding: 0;
-        list-style: none;
-        overflow: hidden;
-        background-color: transparent;
-    }
-
-    ul .btn {
-        display: none;
-        cursor: pointer;
-    }
-
-    ul li {
-        float: left;
-        text-align: center;
-    }
-
-    ul li a {
-        display: block;
-        padding: 15px 0 15px 20px;
-        text-decoration: none;
-        color: black;
-    }
-
-    ul li a:hover {
-        color: #fff;
-    }
-
-    @media (max-width: 30em) {
-        ul li {
-            float: none;
-        }
-
-        ul .btn {
-            display: block;
-        }
-
-        ul .menu li a {
-            padding: 0px 20px 10px 20px;
-        }
-
-        ul .menu {
-            display: none;
-        }
-
-        ul li:hover .menu {
-            display: block;
-        }
-    }
-
-    .st0 {
-        fill: #00202A;
-    }
-
-    #name {
-        margin-left: -2vw;
-    }
-
-    #email {
-        width: 77vw;
-        margin-left: -2vw;
-    }
-
-    #message {
-        width: 77vw;
-        margin-left: -2vw;
-    }
-
-    .fa {
-
-        margin-left: 15px;
-    }
-
-    .myPages {
-        text-align: center;
-    }
-
-    .projectTitle {
-        display: inline-flex;
-        justify-content: center;
-        color: white;
-        font-size: 0.7em;
-        background: rgba(0, 0, 0, 0.5);
-        height: auto;
-        width: 40vw;
-    }
-
-    .sonic {
-        font-size: 20vw;
-    }
-
-    .contactRow {
-        margin-bottom: -30px;
-    }
-
-    .linkImages {
-        margin-bottom: 50px;
-    }
-
-    .st0 {
-        fill: #003150;
-    }
-
-    @media (max-width: 375px) {
-        .button {
-            margin-bottom: 60vw;
-        }
-
-        .btn {
-            height: 100px;
-        }
-    }
-
-    ._links {
-        color: #234 !important;
-    }
-
-    .card-content {
-        height: 75px;
-    }
-
-    svg {
-        padding-top: 200px;
-    }
-</style>
 
 <body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
 
-    <div class="container space">
+    <div class="clouds"></div>
+
+    <div class="container-fluid space">
+
         <div class="row">
-            <h1>Hello, I'm
-                <span>Gregory Row</span>
-            </h1>
+            <h1>Hello, I'm<span>Gregory Row</span></h1>
             <h3>I'm a web developer</h3>
+
         </div>
         <div class="row">
             <div class="button">
@@ -429,9 +70,9 @@
     </ul>
     <div class="blueLine  "></div>
     <div class="row section scrollspy" id="aboutScroll">
-        <div class="row " id="about">
+        <div class="container " id="about">
             <h2>About</h2>
-            <hr>
+
             <br>
             <div class="col s12 m6 image">
                 <img src="assets/images/hexagonMe.png">
@@ -448,17 +89,18 @@
                     <p>Javascript</p>
                     <p>jQuery</p>
                     <p>Anime.js</p>
-                    <p>Firebase</p>
-                    <p>Node.js</p>
-                    <p>Express</p>
                     <p>MySQL</p>
+                    <p>Mongo.db</p>
+                    <p>Express</p>
+                    <p>React.js</p>
+                    <p>Node.js</p>
                 </ul>
             </div>
         </div>
     </div>
     <div class="container projects ">
         <h2 class="prjt ">Projects</h2>
-        <hr>
+
         <div class="row section scrollspy" id="portWork">
             <div class="col s12 m5 offset-m1 l4 offset-l2">
 
@@ -870,7 +512,8 @@
                         <span class="card-title grey-text text-darken-4">News-Scrape
                             <i class="material-icons right">close</i>
                         </span>
-                        <p>This is a a full stack app that scrapes articles from the New York Times science section. Users can then write notes for each saved article</p>
+                        <p>This is a a full stack app that scrapes articles from the New York Times science section.
+                            Users can then write notes for each saved article</p>
                         <ul class="collection with-header center-align">
                             <li class="collection-header">
                                 <h4>Tech Used</h4>
@@ -887,41 +530,42 @@
                 </div>
             </div>
         </div>
-        <svg viewBox="0 0 268 141">
-            <polygon class="st0" points="0,18.6 0,0.7 134,37.4 267.5,0.7 267.5,17.6 134,55.5" />
-            <polygon class="st0" points="0,44.6 0,26.7 134,63.4 267.5,26.7 267.5,43.6 134,81.5" />
-        </svg>
-        <footer class="page-footer">
-            <div class="container section scrollspy" id="contact">
-                <div class="row contactRow">
-                    <h4 class=" white-text text-center myPages">Contact</h4>
-                    <!-- <div class="col s12 offset-l1 "> -->
+    </div>
+    <svg viewBox="0 0 268 141">
+        <polygon class="st0" points="0,18.6 0,0.7 134,37.4 267.5,0.7 267.5,17.6 134,55.5" />
+        <polygon class="st0" points="0,44.6 0,26.7 134,63.4 267.5,26.7 267.5,43.6 134,81.5" />
+    </svg>
+    <footer class="page-footer">
+        <div class="container section scrollspy" id="contact">
+            <div class="row contactRow">
+                <h4 class=" white-text text-center myPages">Contact</h4>
+                <!-- <div class="col s12 offset-l1 "> -->
 
-                    <ul class="col s9 offset-s1 m8 offset-m3 l5 offset-l4 linkImages">
-                        <li>
-                            <a class="grey-text text-lighten-3" href="https://github.com/rowgregory">
-                                <i class="fa fa-github fa-4x"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/gregory-row-8853b2161/">
-                                <i class="fa fa-linkedin-square  fa-4x"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="grey-text text-lighten-3" href="https://rowgregory.github.io/">
-                                <i class="fa fa-sun-o  fa-4x"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:rowgregory@gmail.com">
-                                <i class="fa fa-envelope fa-4x"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="col s9 offset-s1 m8 offset-m3 l5 offset-l4 linkImages">
+                    <li>
+                        <a class="grey-text text-lighten-3" href="https://github.com/rowgregory">
+                            <i class="fa fa-github fa-4x"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/gregory-row-8853b2161/">
+                            <i class="fa fa-linkedin-square  fa-4x"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="grey-text text-lighten-3" href="https://rowgregory.github.io/">
+                            <i class="fa fa-sun-o  fa-4x"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:rowgregory@gmail.com">
+                            <i class="fa fa-envelope fa-4x"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </footer>
+        </div>
+    </footer>
     </div>
 
 
