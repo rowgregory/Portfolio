@@ -23,6 +23,7 @@
  * jQuery
  * Materialize
  * AOS
+ * Animate.css
  
 
 ## Prerequisites
