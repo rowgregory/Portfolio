@@ -22,6 +22,7 @@
  * JavaScript
  * jQuery
  * Materialize
+ * AOS
  
 
 ## Prerequisites
