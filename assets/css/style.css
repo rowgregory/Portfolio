@@ -57,17 +57,17 @@ h1 {
 .space {
     height:100vh;
     overflow: auto;
-    /* line-height: 100vh !important; */
-    /* display: grid; */
+    line-height: 100vh !important;
+    display: grid;
     text-align: center;
-    /* grid-template-columns: 1fr; */
+    grid-template-columns: 1fr;
     /* justify-content: center; */
     /* align-items: center; */
     vertical-align: middle;
     /* display: table-cell; */
     /* margin-left:200px !important; */
-    margin-top:150px !important;
-    margin-bottom:-150px !important;
+    /* margin-top:150px !important;
+    margin-bottom:-150px !important; */
     margin: 0 auto;
     
     
