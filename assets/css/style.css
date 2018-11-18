@@ -343,13 +343,18 @@ ul li {
 
 ul li a {
     display: block;
-    padding: 15px 0 15px 20px;
+    /* padding: 15px 0 15px 20px; */
+    padding:10px;
     text-decoration: none;
     color:black !important;
+   
 }
 
 ul li a:hover {
-    color: #fff;
+    color: white !important;
+    background: black !important;
+    
+    
 }
 
 @media (max-width: 40em) {
