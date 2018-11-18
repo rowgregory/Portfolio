@@ -345,7 +345,7 @@ ul li a {
     display: block;
     padding: 15px 0 15px 20px;
     text-decoration: none;
-    color:white !important;
+    color:black !important;
 }
 
 ul li a:hover {
